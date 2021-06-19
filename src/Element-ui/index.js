@@ -13,8 +13,21 @@ import {
     Menu,
     Submenu,
     MenuItem,
-    Dialog,MessageBox,
-    MenuItemGroup, Breadcrumb, BreadcrumbItem, Card, Col, Row, Table, TableColumn, Switch, Tooltip, Pagination
+    Dialog,
+    MessageBox,
+    MenuItemGroup,
+    Breadcrumb,
+    BreadcrumbItem,
+    Card,
+    Col,
+    Row,
+    Table,
+    TableColumn,
+    Switch,
+    Tooltip,
+    Pagination,
+    Tag,
+    Tree, Select, Option
 } from "element-ui"
 export default {
     install(Vue){
@@ -46,5 +59,9 @@ export default {
         Vue.use(Pagination)
         Vue.use(Dialog)
         Vue.prototype.$confirm=MessageBox.confirm
+        Vue.use(Tag)
+        Vue.use(Tree)
+        Vue.use(Select)
+        Vue.use(Option)
     }
 }
