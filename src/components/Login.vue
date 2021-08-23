@@ -58,6 +58,8 @@
                 }
             }
         },
+        created(){
+        },
         methods: {
             //表单重置
             resetLoginForm() {

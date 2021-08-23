@@ -178,6 +178,7 @@
                     this.$message.error("角色请求失败")
                 }
                 this.getRolesList = res.data
+                console.log(this.getRolesList);
             },
             //重置表单
             addRolesFormReset(){
@@ -244,7 +245,7 @@
             async removeRight1ById(role,rightId){
                 const confirmRequest =await this.$confirm('此操作将永久删除该权限，是否继续', '删除权限',{
                     confirmButtonText: '确定',
-                    cancelButtonText: '删除',
+                    cancelButtonText: '取消',
                     type:"warning",
                 }).catch(err=>err)
                 // 点击确定 返回值为：confirm
@@ -328,6 +329,7 @@
                     ...this.$refs.treeRef.getHalfCheckedKeys(),
                 ]
                 const idStr=keys.join()
+                // console.log(idStr);
                 const{data:res}=await this.$axios.post(`roles/${this.roleId}/rights`,{
                     rids:idStr
                 })

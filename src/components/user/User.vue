@@ -339,7 +339,7 @@
             async removeUserById(id){
                 const confirmResult=await this.$confirm('此操作将永久删除该用户，是否继续', '删除用户', {
                     confirmButtonText: '确定',
-                    cancelButtonText: '删除',
+                    cancelButtonText: '取消',
                     type:"warning",
                 }).catch(err=>err)
                 // 点击确定 返回值为：confirm

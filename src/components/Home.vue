@@ -37,7 +37,7 @@
                                     <span>{{subitem.authName}}</span>
                                 </template>
                             </el-menu-item>
-                    </el-submenu>
+                    </el-submenu>   
 
 
                 </el-menu>
@@ -83,7 +83,6 @@
                 const {data:res}=await this.$axios.get("menus")
                 if(res.meta.status!==200) return this.$message.error("接口请求错误")
                 this.menuList=res.data
-                console.log(this.menuList)
                 console.log(res)
             },
             togleCollapse(){
